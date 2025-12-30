@@ -1,0 +1,562 @@
+/* ========== MERGED CSS - ALL STYLES ========== */
+
+/* --- 1. Global Reset & Basic Styling --- */
+:root {
+    --primary-color: #1D2731;
+    --secondary-color: #333;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* --- 2. Header and Navigation --- */
+.page-header {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    transition: color 0.3s;
+    font-size: 1.2em;
+}
+
+.nav-link:hover {
+    color: #1D2731;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+    text-decoration-color: #1D2731;
+    font-size: 1.3em;
+}
+
+/* --- 3. Hero Section (The main banner) --- */
+.hero-section {
+    background: #e0f7fa; /* Light teal background */
+    padding: 80px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px; /* Space between text and image */
+    min-height: 400px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.hero-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%; /* Makes it circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* --- 4. Main Content / Skills Section --- */
+.main-content {
+    padding: 50px 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: var(--secondary-color);
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+    background-color: var(--primary-color);
+}
+
+/* Skill buttons */
+.skill-button {
+    padding: 0.45rem 0.75rem;
+    margin: 0.35rem;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.skill-button:focus {
+    outline: 2px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+/* Modal backdrop & centering */
+#skill-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+/* Modal box */
+#skill-modal .modal-content {
+    background: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+/* Close button */
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.modal-close:focus {
+    outline: 2px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+/* Modal text spacing */
+#skill-modal h3 { margin: 0 0 0.5rem 0; }
+#skill-modal p { margin: 0; }
+
+/* --- 5. Footer --- */
+.page-footer {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 5%;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: white;
+    margin: 0 10px;
+}
+
+/* --- 6. ABOUT ME PAGE STYLES --- */
+.about-page {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 2em;
+    color: var(--secondary-color);
+    margin: 60px 0 30px;
+}
+
+/* --- Profile Introduction Section --- */
+.profile-intro {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.profile-image-container {
+    flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Make image round */
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+}
+
+.profile-summary h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.profile-summary p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.primary-cta {
+    /* Uses existing .cta-button style from index.html */
+    padding: 10px 20px;
+}
+
+/* --- Technical Journey/Timeline Section --- */
+.section-timeline {
+    padding: 20px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    border-left: 3px solid var(--primary-color);
+    padding: 0 20px 30px 20px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-title {
+    font-size: 1.4em;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.timeline-description {
+    color: #666;
+}
+
+/* --- Core Values Section --- */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.value-card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--primary-color);
+}
+
+.value-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* --- 7. CONTACT PAGE STYLES --- */
+.contact-page {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 5%;
+}
+
+.contact-container-new,
+.connect-links-section,
+.location-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-container-new {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px 0;
+}
+
+.section-heading {
+    font-size: 2em;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* --- Connect Links Section --- */
+.connect-links-section {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.link-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    color: var(--text-color);
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.contact-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.contact-link .icon {
+    font-size: 1.5em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.map-embed,
+.map-embed iframe {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.map-note {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* --- 8. PROJECTS PAGE STYLES --- */
+.projects-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-description {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 50px;
+    color: #666;
+}
+
+/* --- Project Card Layout --- */
+.project-card {
+    background: white;
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Reverse the layout for alternating projects */
+.project-card.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+/* --- Project Image Styling --- */
+.project-image {
+    flex: 1 1 45%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.03);
+}
+
+/* --- Project Details Styling --- */
+.project-details {
+    flex: 1 1 55%;
+}
+
+.project-title {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.project-description {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* --- Project Links Styling --- */
+.project-link {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    margin-right: 15px;
+    font-size: 0.9em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --- 9. Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+    }
+    .main-nav {
+        margin-top: 10px;
+    }
+    .nav-list {
+        justify-content: center;
+    }
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+    }
+    .hero-image {
+        order: -1;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .project-card, 
+    .project-card.reverse-layout {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .project-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-link {
+        width: 100%;
+    }
+}
